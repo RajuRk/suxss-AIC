@@ -251,6 +251,7 @@ li.nav-item a{
     padding: 15px 20px;
     margin: 7px 0;
     border-radius: 5px;
+    height: 240px;
 }
 .why-title{
     text-align: center;
@@ -395,4 +396,12 @@ li.nav-item a{
 }
 #footer{
     border-top: 1px solid #d5d5d5;
+}
+.timeline-date h4.red-text{
+    color: #fe0000;
+}
+@media only screen and (max-width: 600px) {
+    .why-attend-step{
+        height: auto;
+    }
 }
