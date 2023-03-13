@@ -393,3 +393,6 @@ li.nav-item a{
     border-radius: 10px;
     box-shadow: rgb(20 44 88 / 32%) 0px 10px 20px, rgb(20 44 88 / 28%) 0px 6px 6px;
 }
+#footer{
+    border-top: 1px solid #d5d5d5;
+}
