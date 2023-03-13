@@ -16,7 +16,7 @@
           <nav class="navbar navbar-expand-lg navbar-light">
               <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                  <!-- <img src="img/logo-white.png" alt=""/> -->
+                  <img src="img/Aic-white-logo.png" alt="" style="width: 100%; max-width: 250px;"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -24,28 +24,51 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link"  href="#">Home</a>
+                      <a class="nav-link"  href="index.html#video-background">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About Us</a>
+                      <a class="nav-link" href="index.html#about-us">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Summit
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Why Attend</a></li>
+                        <li><a class="dropdown-item" href="index.html#why-attend">Why Attend</a></li>
                         <li><a class="dropdown-item" href="#">Who Should Attend</a></li>
                         <li><a class="dropdown-item" href="#">Venue</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Process</a>
+                      <a class="nav-link" href="index.html#process">Process</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="partners.html">Partner</a>
                     </li>
                   </ul>
+                  <button type="button" class="btn btn-primary register-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Register
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="select-btn text-center">
+                             <a href="/general-category.html"><button>General Category</button></a>
+                             <a href="/startup-challenge.html"><button>Startup Challenge</button></a>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
           </nav>
@@ -54,31 +77,35 @@
     <section id="startup-form" class="mt-4 mb-5">
       <div class="container">
         <div class="row">
+          <div class="title text-center mb-4">
+            <h2>Startup Challenge</h2>
+            <div class="hr mt-2" style="margin: auto"></div>
+          </div>
             <div class="startup-coulmn">
-                <form>
+                <form method="post" action="https://sheetdb.io/api/v1/chsiy0n7cjr4s" id="sheetdb-form">
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Startup Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Startup Name" required>
+                      <input type="text" name="data[startupname]" class="form-control" id="exampleFormControlInput1" placeholder="Enter Startup Name" required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput2" class="form-label">Founder Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter Founder  Name" required>
+                      <input type="text" name="data[foundername]" class="form-control" id="exampleFormControlInput2" placeholder="Enter Founder  Name" required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput4" class="form-label">Contact Number</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Enter Contact Number" required>
+                      <input type="text" name="data[contact]" class="form-control" id="exampleFormControlInput4" placeholder="Enter Contact Number" required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput5" class="form-label">Mail ID</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Enter Email" required>
+                      <input type="text" name="data[mail]" class="form-control" id="exampleFormControlInput5" placeholder="Enter Email" required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput6" class="form-label">Website</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Website URL" required>
+                      <input type="text" name="data[website]" class="form-control" id="exampleFormControlInput6" placeholder="Enter Website URL" required>
                     </div>
                     <div class="mb-3">
                       <label for="exampleFormControlInput7" class="form-label">Startup Stage</label>
-                      <select class="form-select" aria-label="Default select example">
+                      <select name="data[startupstage]" class="form-select" aria-label="Default select example">
                         <option selected>Select</option>
                         <option value="Ideation">Ideation</option>
                         <option value="POC">POC</option>
@@ -89,7 +116,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput7" class="form-label">Startup Category</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select name="data[startupcategory]" class="form-select" aria-label="Default select example">
                           <option selected>Select</option>
                           <option value="Deeptech">Deeptech</option>
                           <option value="Carbontech">Carbontech</option>
@@ -99,15 +126,15 @@
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlInput6" class="form-label">Pitch Deck</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Pitch Deck Link" required>
+                        <input name="data[pitchdeck]" type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Pitch Deck Link" required>
                       </div>
                       <div class="mb-3">
-                        <label for="exampleFormControlInput6" class="form-label">Video/Ppt of prototype demo</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Video/PPT link" required>
+                        <label for="exampleFormControlInput6" class="form-label">Video/demo or prototype</label>
+                        <input name="data[video]" type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Video/PPT link" required>
                       </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput6" class="form-label">Linkedin</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Linkedin URL" required>
+                        <input name="data[linkedin]" type="text" class="form-control" id="exampleFormControlInput6" placeholder="Enter Linkedin URL" required>
                       </div>
                     <div class="mb-3">
                       <button type="submit" class="register-button">Submit</button>
@@ -160,6 +187,22 @@
       <div class="copyright-sec">
         <p class="m-0">&copy; 2023 <a href="https://rankuhigher.in">Rankuhigher</a>. All Rights Reserved</p>
       </div>
+      <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alert('Thanks for you submission')
+            window.location.href = "index.html";
+          });
+        });
+      </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
       </script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
