@@ -43,6 +43,10 @@ li.nav-item a{
     padding: 5px 30px;
     border-radius: 5px;
 }
+.register-button:hover{
+    background-color: #142c58;
+    border: 1px solid #142c58;
+}
 .carousel-item {
 	height: 80vh;
 	min-height: 300px;
@@ -156,7 +160,7 @@ li.nav-item a{
 .title p.sub-head{
     color: #142c58;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 18px;
     margin-bottom: 5px;
 }
@@ -387,6 +391,7 @@ li.nav-item a{
     color: #fff;
     padding: 7px 12px;
     border-radius: 6px;
+    margin: 4px 0;
 }
 .startup-coulmn{
     padding: 20px 20px;
@@ -399,6 +404,7 @@ li.nav-item a{
 }
 .timeline-date h4.red-text{
     color: #fe0000;
+    height: 57px;
 }
 #video-background{
     width: 100%;
@@ -416,6 +422,34 @@ li.nav-item a{
     bottom: 0;
     z-index: -1;
 }
+.brochure-btn a button{
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+.mobile-process{
+    display: none;
+}
+.mobile-process ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+.mobile-process ul li p{
+    border: 2px solid #142c58;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 7px;
+    color: #fe0000;
+    font-weight: 600;
+}
+.mobile-process ul li i{
+    margin-bottom: 15px;
+}
+.mobile-process ul li{
+    position: relative;
+}
 @media (min-aspect-ratio: 16/9){
     .back-video{
         width: 100%;
@@ -431,5 +465,11 @@ li.nav-item a{
 @media only screen and (max-width: 600px) {
     .why-attend-step{
         height: auto;
+    }
+    .process-line{
+        display: none;
+    }
+    .mobile-process{
+        display: block;
     }
 }
